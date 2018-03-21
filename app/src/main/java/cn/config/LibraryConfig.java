@@ -28,7 +28,7 @@ public class LibraryConfig extends AbstractLibraryConfig {
         }
 
         @Override
-        public Builder splashShowCaipiaoTime(Date date) {
+        public Builder splashShowCaipiaoTime(String date) {
             libraryConfig.setSplashShowCaipiaoTime(date);
             return this;
         }

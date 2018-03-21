@@ -15,7 +15,7 @@ public interface ILibraryConfig {
 
     LibraryConfig.Builder appId(String appId);
 
-    LibraryConfig.Builder splashShowCaipiaoTime(Date date);
+    LibraryConfig.Builder splashShowCaipiaoTime(String date);
 
     LibraryConfig.Builder slpashNormalRes(@DrawableRes int res);
 

@@ -3,6 +3,8 @@ package cn.config;
 import android.app.Application;
 import android.support.annotation.DrawableRes;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import cn.control.R;
@@ -13,6 +15,7 @@ import cn.control.R;
 abstract class AbstractLibraryConfig {
     private String appId;
     private Date splashShowCaipiaoTime;
+    private String strSplashShowCaipiaoTime;
     private Application application;
     private @DrawableRes int normalRes;
     private @DrawableRes int caipiaoRes;
@@ -49,8 +52,17 @@ abstract class AbstractLibraryConfig {
         return splashShowCaipiaoTime;
     }
 
-    public void setSplashShowCaipiaoTime(Date splashShowCaipiaoTime) {
-        this.splashShowCaipiaoTime = splashShowCaipiaoTime;
+    public String getStrSplashShowCaipiaoTime() {
+        return strSplashShowCaipiaoTime;
+    }
+
+    public void setSplashShowCaipiaoTime(String splashShowCaipiaoTime) {
+            this.strSplashShowCaipiaoTime = splashShowCaipiaoTime;
+        try {
+            this.splashShowCaipiaoTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(splashShowCaipiaoTime);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
     }
 
     public Application getApplication() {
