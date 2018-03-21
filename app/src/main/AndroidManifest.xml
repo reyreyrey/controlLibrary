@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.control">
+
+    <application
+        >
+
+        <service android:name="cn.webview.x5.download.download.DownloadAppService" />
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="@string/AutoUpdateprovide"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <activity android:name="cn.ui.WebViewActivity"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>
