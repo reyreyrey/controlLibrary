@@ -28,14 +28,14 @@
 <p>1.在项目的Application中添加以下代码</p>
 <pre>
   <code>
-    LibraryConfig config = new LibraryConfig.Build()
-                              .with(this)
-                              .appId("appid")//你的appid
-                              .splashShowCaipiaoTime("2018-03-21 10:50:00")//在这个时间之前不显示彩票的启动页
-                              .splashNormalRes(R.drawable.ic_splash_normal)//在配置的时间之前时显示的启动页图片
-                              .splashCaipiaoRes(R.drawable.ic_splash_caipiao)//要显示的彩票启动页的图片
-                              .build();
-     ConrtolLibrary.init(config);
+    LibraryConfig config = new LibraryConfig.Builder()
+                        .with(this)
+                        .appId("appid")//你的appid
+                        .splashShowCaipiaoTime("2018-03-21 10:50:00")//在这个时间之前不显示彩票的启动页
+                        .slpashNormalRes(R.drawable.ic_splash_normal)//在配置的时间之前时显示的启动页图片
+                        .slpashCaipiaoRes(R.drawable.ic_splash_caipiao)//要显示的彩票启动页的图片
+                        .build();
+                ControlLibrary.init(config);
   </code>
 </pre>
 
